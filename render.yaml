@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: fire-reach
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python frontend/app.py
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
